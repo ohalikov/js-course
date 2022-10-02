@@ -9,3 +9,7 @@ let car = {
 
 console.log(car);
 console.log(car.name);
+
+console.log(car.year);
+
+car.speed = 300;
