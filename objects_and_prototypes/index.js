@@ -7,4 +7,5 @@ let car = {
     year: 2015
 }
 
-console.log(car)
+console.log(car);
+console.log(car.name);
