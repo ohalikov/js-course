@@ -12,4 +12,4 @@ console.log(car.name);
 
 console.log(car.year);
 
-car.speed = 300;
+car.speed = 250;
