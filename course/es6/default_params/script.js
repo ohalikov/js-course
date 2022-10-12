@@ -1,16 +1,12 @@
-// number, string, boolean, null, undefined
-
-// object
-p = document.querySelector(".under-header")
- 
-p.inner
-console.log(p)
-let car = {
-    name: "LUCID",
-    year: 2022,
+const createPost = (title, text = 'Default text', date) => {
+    date = date || new Date().toLocaleDateString()
+    return {
+        title: title, // можно оставить только title
+        text: text, // text
+        date: date // date
+    }
 }
 
-// car.__proto__ => Object.prototype
-// [] => Array => Object
 
-p.innerHTML = `Машина у меня ${car.name}, ${car.year} года выпуска `
+const post = createPost('Скоро новый год!')
+console.log(post)
