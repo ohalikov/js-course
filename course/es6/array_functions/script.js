@@ -18,19 +18,20 @@ console.log(getAge(1980))
 // Without lost context
 const person = {
     age: 25,
-    name: 'Maxim',
+    firstName: 'Maxim',
     logNameWithTimeout: function() {
-        setTimeout(() => {
-            console.log(this.name);
-        }, 1000)
+        setTimeout(function() {
+            console.log(this.firstName)
+        }.bind(this), 1000)
     }
 }
 
 // With lost context
+// Так как создали функцию, которая не создает свой контекст
 const non_person = {
     age: 25,
     name: 'Maxim',
-    logNameWithTimeout: function() {
+    logNameWithTimeout: () => {
         setTimeout(() => {
             console.log(this.name);
         }, 1000)
