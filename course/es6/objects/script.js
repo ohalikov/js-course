@@ -28,3 +28,4 @@ bmw.logFields()
 const {year} = bmw
 
 console.log(year)
+
