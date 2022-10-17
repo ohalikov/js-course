@@ -20,6 +20,7 @@ promise.then(() => {
                 {uid: 'id1', name: 'Max'},
                 {uid: 'id2', name: 'Lena'}
             ]
+            // reject('БД не смогла обработать')
             console.log('DataBase: Формирую список пользователей')
             console.log('...')
             resolve(users)
@@ -29,11 +30,12 @@ promise.then(() => {
 .then((dbUsers) => {
     return new Promise(function(resolve, reject) {
         setTimeout(() => {
-            console.log('Server: Трансформирую полученные данные для Клиента')
+            console.log('Server: Трансформирую полученные данные для Клиента', dbUsers)
             console.log('...')
+            
             let users = dbUsers.map((user) => {
                 return {
-                    id: user.id,
+                    id: user.uid,
                     firstName: user.name,
                     timestamp: Date.now() 
                 }
