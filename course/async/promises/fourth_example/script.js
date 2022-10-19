@@ -1,4 +1,4 @@
-baseURL = 'https://api.sampleapis.com/coffee/hot'
+const baseURL = 'https://api.sampleapis.com/coffee/hot'
 
 const family = [
     {member: 'mother', id: 111, coffee: 'Latte'},
