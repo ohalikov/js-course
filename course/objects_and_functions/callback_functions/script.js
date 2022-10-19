@@ -54,5 +54,3 @@ function showCats2(d, url) {
 
 getCats(showCats)
 getCats(showCats2)
-
-
