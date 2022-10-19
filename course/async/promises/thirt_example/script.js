@@ -12,6 +12,6 @@ coffee
     })
     .catch( err => {
         console.log(err);
-    })
+});
 
 
