@@ -1,6 +1,6 @@
 // NOT CLOSURES
 // >>> What is the Different ?
-// I use counter is only one
+// I used counter is only one
 let createOldConter = function(counterName) {
     let counter = 0;
     return ++counter
