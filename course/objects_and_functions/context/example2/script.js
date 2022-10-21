@@ -70,9 +70,9 @@ document.querySelector('.b-2').addEventListener('click', () => {
 
 // count = count + 5
 const f4 = f1.bind(document.querySelector('.under-header3'));
-f4();
-f4();
-f4();
+// f4();
+// f4();
+// f4();
 document.querySelector('.b-4').addEventListener('click', f4)
 
 
@@ -93,3 +93,37 @@ const sum4 = sum3.bind(document.querySelector('.under-header6'))
 document.querySelector('.b-6').addEventListener('click', () => {
     sum4(3,4,5)
 })
+
+function sum7(a,b,c) {
+    return a + b + c
+}
+// Определяем bind в контексте частичной функции.
+const sum8 = sum7.bind(undefined, 100, 300)
+
+btn7 = document.querySelector('.b-7')
+btn7.addEventListener('click', () => {
+    outputField = document.querySelector('.out-7')
+    outputField.textContent = sum8(5)
+})
+
+// Вытягиваем методов
+const validate = {
+    password: 'himhai322323',
+    email: 'pfdsafa@de',
+    isValid: false,
+    sayHi() {
+        console.log(`object => ${JSON.stringify(this)}`);
+        return (this.password.length > 6) ? true : false;
+    }
+}
+
+// console.log(validate.sayHi());
+const obj = {
+    password: "hello12344"
+}
+const validatePassword = validate.sayHi.bind(obj);
+
+console.log(validatePassword());
+obj.password = '123'
+
+console.log(validatePassword());
