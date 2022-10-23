@@ -28,7 +28,8 @@ function load() {
             // }
 
             // 3 variant
-            ul.insertAdjacentHTML('afterbegin', html.join(" "))
+            // ul.innerHTML = html.join(" ")
+            ul.insertAdjacentHTML('beforeend', html.join(" "))
             
         })
         .catch( (e) => {
